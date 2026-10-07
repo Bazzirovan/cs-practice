@@ -1,4 +1,4 @@
-def find_winner(names, scores):
+def winner(names: list[str], scores: list[float]) -> str:
     n = names.copy()
     s = scores.copy()
     if not names:
@@ -10,6 +10,12 @@ def find_winner(names, scores):
             max_score = scores[i]
             max_i = i
     return max_i
+
+
+def average(scores: list[float]) -> float:
+    if not scores: return 0.0
+    return round(sum(scores) / len(scores), 2)
+
 
 
 
