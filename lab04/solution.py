@@ -25,7 +25,7 @@ def ranking(names, scores):
 
 
 def above_average(names, scores):
-    avg = average(list)
+    avg = average(scores)
     return [names[i] for i in range(len(names)) if scores[i] > avg]
 
     #
