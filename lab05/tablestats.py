@@ -31,7 +31,7 @@ def total_minutes(rows, kind):
     return round(total, 1)
 
 def to_csv(counts):
-    lines = ['тип, количество']
+    lines = ['тип,количество']
     for kind in sorted(counts):
-        lines.append(f"{kind}, {counts[kind]}")
+        lines.append(f"{kind},{counts[kind]}")
     return '\n'.join(lines) + '\n'
