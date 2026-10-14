@@ -5,7 +5,7 @@ def read_rows(lines):
     for line in lines:
         line = line.strip()
         if not line: continue
-        parts = [p.strip()] for p in line.split(',')
+        parts = [p.strip() for p in line.split(',')]
         if header is None: header = parts
         elif len(parts) == len(header): rows.append(dict(zip(header, parts)))
 
@@ -15,8 +15,8 @@ def read_rows(lines):
 def count_types(rows):
     counts = {}
     for row in rows:
-        temp = row('тип')
-        counts[temp] = counts.get(t, 0) + 1
+        temp = row['тип']
+        counts[temp] = counts.get(temp, 0) + 1
     return counts
 
 def total_minutes(rows, kind):
