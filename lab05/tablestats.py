@@ -10,3 +10,11 @@ def read_rows(lines):
         elif len(parts) == len(header): rows.append(dict(zip(header, parts)))
 
     return rows
+
+
+def count_types(rows):
+    counts = {}
+    for row in rows:
+        temp = row('тип')
+        counts[temp] = counts.get(t, 0) + 1
+    return counts
