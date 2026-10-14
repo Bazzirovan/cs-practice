@@ -26,7 +26,8 @@ def total_minutes(rows, kind):
             val = row['минуты'].replace(',', '.')
             try:
                 total += float(val)
-            except ValueError:
+            except ValueError as val_err:
+                print(f"Ошибка: {val_err}")
                 continue
     return round(total, 1)
 
