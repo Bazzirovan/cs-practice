@@ -27,5 +27,4 @@ def column_range(matrix: list[list[float]], column: int) -> float:
 
 
 
-if __name__ == "__main__":
-    # Здесь могли бы быть ваши тесты =-) 
+
