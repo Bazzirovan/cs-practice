@@ -24,3 +24,8 @@ def column_range(matrix: list[list[float]], column: int) -> float:
     arr = np.asarray(matrix)
     res = np.ptp(arr[:, column])
     return round(float(res), 6)
+
+
+
+if __name__ == "__main__":
+    # Здесь могли бы быть ваши тесты =) 
